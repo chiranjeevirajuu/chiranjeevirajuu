@@ -1,0 +1,30 @@
+public class ListNode {
+  public int val;
+  public ListNode next;
+
+  public ListNode(int x) {
+    val = x;
+  }
+
+  public static void main(String[] args) {
+
+    // Create 3 nodes
+    ListNode l1 = new ListNode(4);   // Create the first node with value 4
+    ListNode l2 = new ListNode(8);   // Create the second node with value 8
+    ListNode l3 = new ListNode(15);  // Create the third node with value 15
+
+    // Link the nodes
+    l1.next = l2;  // The first node points to the second node
+    l2.next = l3;  // The second node points to the third node
+    l3.next = null; // The third node points to null, indicating the end of the list
+
+    // Print values
+    ListNode ptr = l1;  // Initialize a pointer 'ptr' to the first node
+
+    // Traverse the linked list and print values
+    while (ptr != null) {
+      System.out.println(ptr.val);  // Print the value of the current node
+      ptr = ptr.next;              // Move the pointer to the next node
+    }
+  }
+}
